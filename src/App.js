@@ -6,12 +6,6 @@ import CountryHeading from "./components/CountryHeading.js";
 import CountryScore from "./components/CountryScore.js";
 
 const App = () => {
-  // console.log(allCountryScores);
-  // console.log(allCountryScores[0].name);
-  // console.log(allCountryScores[0].scores);
-  // console.log(allCountryScores[0].scores[0].n);
-  // console.log(allCountryScores[0].scores[0].s);
-
   const countries = allCountryScores.sort(function (a, b) {
     return a.name.localeCompare(b.name);
   });
