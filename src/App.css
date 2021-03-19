@@ -7,6 +7,28 @@
   pointer-events: none;
 }
 
+.heading, .CountryHeading {
+  /* display: flex; */
+  text-align: center;
+}
+
+.countryScore-container {
+  background-color: bisque;
+}
+
+.countryScore {
+  display: flex;
+  justify-content: center;
+}
+
+.countryScore p {
+  min-width: 200px;
+  text-align: right;
+  padding: 8px;
+  background-color: aquamarine;
+  margin-bottom: .1px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
