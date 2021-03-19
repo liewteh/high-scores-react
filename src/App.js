@@ -19,7 +19,7 @@ const App = () => {
   return (
     <div className="container">
       <Heading />
-      {allCountryScores.map((elem, index) => (
+      {countries.map((elem, index) => (
         <div className="countryScore-container">
           <CountryHeading key={index} name={elem.name} />
           {elem.scores
