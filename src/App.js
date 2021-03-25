@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import "./App.css";
 import allCountryScores from "./data/allCountryScores.js";
 import Heading from "./components/Heading.js";
@@ -10,19 +10,33 @@ const App = () => {
     return a.name.localeCompare(b.name);
   });
 
+  const [sort, setSort] = useState("ascending");
+
+  const scoreSort = () => {
+    setSort (sort => {
+      if (sort === "ascending") {
+        return "descending";
+      } else {
+        return "ascending";
+      }
+    });
+  };
+
   return (
     <div className="container">
       <Heading />
+      <button className="btn btn-success" onClick={scoreSort}>Sort Scores</button>
       {countries.map((elem, index) => (
-        <div className="countryScore-container">
-          <CountryHeading key={index} name={elem.name} />
-          {elem.scores
+        <div className="countryScore-container" key={index}>
+          <CountryHeading name={elem.name} />
+          <CountryScore elem={elem} scores={sort} />
+          {/* {elem.scores
             .sort((a, b) => {
-              return a.s - b.s;
+              return b.s - a.s;
             })
             .map((elem, index) => (
               <CountryScore key={index} n={elem.n} s={elem.s} />
-            ))}
+            ))} */}
         </div>
       ))}
     </div>
