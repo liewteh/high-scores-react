@@ -7,29 +7,40 @@
   pointer-events: none;
 }
 
-.heading, .CountryHeading {
-  /* display: flex; */
+.heading,
+.CountryHeading,
+.container h1 {
   text-align: center;
 }
 
-.btn {
+.tableCentre {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tableCentre tbody tr th,
+.tableCentre tbody tr td {
+  min-width: 150px;
   text-align: center;
 }
+
 .countryScore-container {
   background-color: bisque;
 }
 
-.countryScore {
+.countryScore ul {
   display: flex;
   justify-content: center;
+  list-style: none;
+  background-color: aquamarine;
+  margin-bottom: 0.1px;
+  color: red;
 }
 
-.countryScore p {
+.countryScore ul li {
   min-width: 200px;
-  text-align: right;
+  text-align: center;
   padding: 8px;
-  background-color: aquamarine;
-  margin-bottom: .1px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -46,7 +57,6 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {

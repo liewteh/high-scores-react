@@ -13,26 +13,28 @@ const CountryScore = (props) => {
     })
   }
 
-  function test (sortedData) {
-    // console.log(sortedData);
-    console.log(sortedData.n);
-    console.log(sortedData.s);
-  }
+  // function test (sortedData) {
+  //   // console.log(sortedData);
+  //   console.log(sortedData.n);
+  //   console.log(sortedData.s);
+  // }
 
   return (
-    <ul className="countryScore">
+    <div className="countryScore">
       {scoresSort.map((sortedData, index) => {
-        <li key={index}>
-          <p>{test(sortedData)}</p>
-          <p>{sortedData.n}</p>
-          <p>{sortedData.s}</p>
-        </li>
+        return (
+        <ul key={index}>
+          {/* <li>{test(sortedData)}</li> */}
+          <li>{sortedData.n}</li>
+          <li>{sortedData.s}</li>
+        </ul>
+        )
       })}
       {/* {scoresSort}
 
       <p>{props.n}</p>
       <p>{props.s}</p> */}
-    </ul>
+    </div>
   );
 };
 
