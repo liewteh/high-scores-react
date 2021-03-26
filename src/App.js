@@ -46,13 +46,6 @@ const App = () => {
         <div className="countryScore-container" key={index}>
           <CountryHeading name={elem.name} />
           <CountryScore elem={elem} scores={sort} />
-          {/* {elem.scores
-            .sort((a, b) => {
-              return b.s - a.s;
-            })
-            .map((elem, index) => (
-              <CountryScore key={index} n={elem.n} s={elem.s} />
-            ))} */}
         </div>
       ))}
     </div>
